@@ -1,0 +1,14 @@
+==POST Request==
+curl -d '{"empName":"jons", "empAddress":"LA", "empNumber":"12130987654"}' -H 'Content-Type: application/json' http://localhost:8080/api/v1/employee/saveEmployee | json_pp
+
+==PUT Request==
+curl -d '{"empID":2, "empName":"jons", "empAddress":"UK", "empNumber":"12130987654"}' -H 'Content-Type: application/json' -X PUT http://localhost:8080/api/v1/employee/updateEmployee | json_pp
+
+==GET getAllEmployees Reqeuest==
+curl -X GET http://localhost:8080/api/v1/employee/getAllEmployees | json_pp
+
+==GET searchEmployeeById Request==
+curl -X GET http://localhost:8080/api/v1/employee/searchEmployee/2 | json_pp
+
+==DELETE deleteEmployee Request==
+curl -X DELETE http://localhost:8080/api/v1/employee/deleteEmployee/2 | json_pp 
